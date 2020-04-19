@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --yellow: #fafba4;
+    --pink: #eca0b6;
+    --m-blue: #a1e6e3;
+    --l-blue: #d7fffd;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 80%;
+    justify-content: center;
+    background: var(--l-blue);
+    margin-top: 3rem;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: capitalize;
+}
+
+/* ========== Add Item ==========*/
+
+.add-item-container {
+    background: var(--pink);
+    margin: 1rem 0;
+    padding: 2rem;
+    border-radius: .5rem;
+    text-align: center;
+    border: 2px solid #272932;
+    box-shadow: 0 3px 6px #272932;
+}
+
+.add-item-action {
+    border: 1.5px solid black;
+    padding: .5rem 0;
+    border-radius: .5rem;
+    display: none;
+}
+
+.add-item-input {
+    background: transparent;
+    border: none;
+    border-bottom: 3px solid black;
+    width: 100%;
+    font-size: 1.8rem;
+    padding: .5rem;
+    color: black;
+    outline: none;
+}
+
+.add-item-submit {
+    background: transparent;
+    border: 2px solid black;
+    display: block;
+    width: 80%;
+    margin: 2rem auto 0 auto;
+    font-size: 1.1rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    padding: .5rem;
+    text-transform: capitalize;
+    outline: none;
+    transition: all .25s ease;
+}
+
+.add-item-submit:hover {
+    background: var(--m-blue);
+}
+
+/* ========== Display Item ==========*/
+
+.display-item-container {
+    background: var(--yellow);
+    margin: 1rem 0;
+    padding: 2rem;
+    border-radius: .5rem;
+    text-align: center;
+    border: 2px solid #272932;
+    box-shadow: 0 3px 6px #272932;
+}
+
+.display-item-action {
+    border: 1.5px solid black;
+    padding: .5rem 0;
+    border-radius: .5rem;
+    display: none;
+}
+
+.display-item-clear {
+    background: transparent;
+    border: 2px solid black;
+    display: block;
+    width: 80%;
+    margin: 2rem auto 0 auto;
+    font-size: 1.1rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    padding: .5rem;
+    text-transform: capitalize;
+    outline: none;
+    transition: all .25s ease;
+}
+
+.display-item-clear:hover {
+    background: var(--m-blue);
+}
+
+.grocery-item {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    /* grocery-item-title will stretch 4 fractions of the grocery-item container*/
+    /* grocery-item-title will stretch 1 fraction of the grocery-item container*/
+    align-items: center;
+    border-radius: .5rem;
+    padding: .5rem;
+    transition: all .25s ease;
+    margin: .5rem 0;
+}
+
+.grocery-item:hover {
+    background: var(--m-blue);
+}
+
+.grocery-item-title {
+    text-align: left;
+    margin: .5rem;
+    font-size: 1.2rem;
+}
+
+.grocery-item-link {
+    color: red;
+    transition: all .2s ease;
+}
+
+.grocery-item:hover .grocery-item-link {
+    transform: scale(1.3);
+}
+
+/* ========== Action Classes ==========*/
+
+.alert {
+    color: red;
+    border-color: red;
+    display: block;
+    margin-bottom: 0.5rem
+}
+
+.success {
+    color: green;
+    border-color: green;
+    display: block;
+    margin-bottom: 0.5rem
+}
+
+@media screen and (min-width:768px) {
+    body {
+        grid-template-columns: 50%;
+    }
+}
